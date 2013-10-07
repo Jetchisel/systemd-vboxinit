@@ -1,6 +1,3 @@
-Jetchisel
-=========
-
 systemd-vboxinit
 
 
