@@ -20,14 +20,6 @@
 #                                                                                            #
 # ========================================================================================== #
 
-# ****************************************************************************************** #
-#                                                                                            #
-#             To match VirtualBox or virtualbox or ViRtUaLbOx and vIrTuAlBoX.                #
-#                                                                                            #
-# ****************************************************************************************** #
-
-shopt -s nocasematch
-
 
 # ******************************************************************************************* #
 #                                                                                             #
@@ -36,6 +28,9 @@ shopt -s nocasematch
 # ******************************************************************************************* #
 
 if ! type -P VirtualBox >/dev/null 2>&1; then
+  echo "VirtualBox is either not installed or is not in your PATH." >&2
+  exit 1
+elif ! type -P virtualbox > /dev/null 2>&1; then
   echo "VirtualBox is either not installed or is not in your PATH." >&2
   exit 1
 fi
