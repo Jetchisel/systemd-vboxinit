@@ -60,31 +60,7 @@ systemd-vboxinit
 #                                                                                            #
 #  Settings --> General --> Basic --> "StartupMode --> Automatic"                            #
 #                                                                                            # 
-# ****************************************************************************************** #
-#  Create an file called "vboxvmservice.service" (or any name that suits you)                #
-#  inside /usr/lib/systemd/system and add the entry below. Replace "username"                # 
-#  with the user that belongs to the vboxusers group.                                        # 
-#                                                                                            #
-#  [Unit]                                                                                    #
-#  Description=VBox Virtual Machine  Service                                                 #
-#  Requires=systemd-modules-load.service                                                     #
-#  After=systemd-modules-load.service                                                        #
-#  Documentation=http://jason.ferrer.com.ph/2013/09/phpvirtualbox-on-opensuse-reloaded.html  #
-#                                                                                            #
-#  [Service]                                                                                 #
-#  Type=oneshot                                                                              #
-#  User=username                                                                             #
-#  Group=vboxusers                                                                           #
-#  StandardOutput=syslog                                                                     #
-#  EnvironmentFile=/etc/default/virtualbox                                                   #
-#  ExecStart=/usr/lib/systemd/systemd-vboxinit start                                         #
-#  ExecStop=/usr/lib/systemd/systemd-vboxinit stop                                           #
-#  RemainAfterExit=yes                                                                       #
-#                                                                                            #
-#  [Install]                                                                                 #
-#  WantedBy=multi-user.target                                                                #
-#                                                                                            #
-# ****************************************************************************************** # 
+
 #  To enable that service at boot.                                                           #
 #                                                                                            #
 #  systemctl enable vboxvmservice.service                                                    #
