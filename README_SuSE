@@ -15,7 +15,7 @@ systemd-vboxinit
 # ****************************************************************************************** #
 #                                                                                            # 
 #                                                                                            #
-#  Put this script in /usr/lib/systemd/ and name it "systemd-vboxinit"                       #
+#  copy systemd-vboxinit  in /usr/lib/systemd/                                               #
 #                                                                                            #
 #  Set permission:                                                                           #
 #                                                                                            #
@@ -39,25 +39,8 @@ systemd-vboxinit
 #  and put something like this                                                               # 
 #                                                                                            #
 #  VBOXWEB_USER=username                                                                     #
-#  VBOXAUTOSTART_DB=/etc/vbox                                                                #
-#  VBOXAUTOSTART_CONFIG=/etc/vbox/autostart.cfg                                              #
-#                                                                                            #
-# ****************************************************************************************** #
-#  Create a directory /etc/vbox and a file named autostart.cfg inside that directory         #
-#  and put something like this.(replace username)                                            #
 #                                                                                            #
 #                                                                                            #
-#  default_policy = deny                                                                     #
-#                                                                                            #
-#  username  = {                                                                             #
-#      allow = true                                                                          #
-#  }                                                                                         #
-#                                                                                            #
-# ****************************************************************************************** #
-#  Set the autostart path using VBoxManage as a normal user that belongs to the              #
-#  vboxusers group.                                                                          #
-#                                                                                            #
-#  VBoxManage setproperty autostartdbpath /etc/vbox                                          #
 #                                                                                            #
 # ****************************************************************************************** #
 #  Configure phpvirtualbox's php.ini                                                         #
