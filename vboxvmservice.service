@@ -5,13 +5,10 @@ After=systemd-modules-load.service
 Documentation=http://jason.ferrer.com.ph/2013/09/phpvirtualbox-on-opensuse-reloaded.html
 
 [Service]
-#Type=forking
 Type=oneshot
 User=jetchisel
-#PIDFile=/home/jetchisel/VirtualBox\ VMs/vboxweb.pid
 Group=vboxusers
 StandardOutput=journal
-#StandardOutput=tty
 EnvironmentFile=/etc/default/virtualbox
 ExecStart=/usr/lib/systemd/systemd-vboxinit start
 ExecStop=/usr/lib/systemd/systemd-vboxinit stop
