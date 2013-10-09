@@ -27,6 +27,14 @@ systemd-vboxinit
 #   /usr/lib/systemd/systemd-vboxinit {stop|start}                                           #
 #                                                                                            #
 # ****************************************************************************************** #
+#                                                                                            #
+# Copy the file  "vboxvmservice.service" inside /usr/lib/systemd/system and add the          #
+# entry below.  Replace "username" with the user that belongs to the vboxusers group.        #
+#                                                                                            #
+#                                                                                            #
+#                                                                                            #
+#                                                                                            #
+# ****************************************************************************************** #
 #  Create an file called virtualbox in /etc/default (replace username)                       #
 #  and put something like this                                                               # 
 #                                                                                            #
