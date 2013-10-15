@@ -16,12 +16,12 @@ copy systemd-vboxinit  in /usr/lib/systemd/
                                                                                             
 Set permission:                                                                           
                                                                                             
-chmod ug+rx /usr/lib/systemd/systemd-vboxinit                                             
-chgrp vboxusers /usr/lib/systemd/systemd-vboxinit                                         
+  chmod ug+rx /usr/lib/systemd/systemd-vboxinit                                             
+  chgrp vboxusers /usr/lib/systemd/systemd-vboxinit                                         
                                                                                             
 For testing the script:                                                                   
                                                                                             
-/usr/lib/systemd/systemd-vboxinit {stop|start}                                           
+  /usr/lib/systemd/systemd-vboxinit {stop|start}                                           
 
                                                                                             
 Copy the file  "vboxvmservice.service" inside /usr/lib/systemd/system and                  
@@ -31,26 +31,26 @@ The Documentation entry is optional
 Create an file called virtualbox in /etc/default (replace username)                       
 and put something like this                                                                
                                                                                             
-VBOXWEB_USER=username                                                                     
+  VBOXWEB_USER=username                                                                     
                                                                                             
 
 Configure phpvirtualbox's php.ini                                                         
                                                                                             
-Uncomment "var $startStopConfig  true;"                                                  
+  Uncomment: "var $startStopConfig  true;"                                                  
                                                                                             
 Configure vms in phpvirtualbox's graphical menu:                                          
                                                                                             
-Settings --> General --> Basic --> "StartupMode --> Automatic"                            
+  Settings --> General --> Basic --> "StartupMode --> Automatic"                            
                                                                                              
 To enable that service at boot.                                                           
                                                                                             
-systemctl enable vboxvmservice.service                                                    
+  systemctl enable vboxvmservice.service                                                    
                 
 check some info about the service
 
-journalctl _SYSTEMD_UNIT=vboxvmservice.service                                            
+  journalctl _SYSTEMD_UNIT=vboxvmservice.service                                            
                                                                                             
 To check status:                                                                          
                                                                                             
-systemctl status vboxvmservice.service                                                   
+  systemctl status vboxvmservice.service                                                   
                                                                                         
