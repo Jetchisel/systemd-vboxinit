@@ -13,9 +13,9 @@ This is the rewritten/modified version for  OpenSuSE using systemd.
 This works with  phpVirtualBox.                                                         
                                                                                             
 
-1 copy systemd-vboxinit  in /usr/lib/systemd/                                               
+1. copy systemd-vboxinit  in /usr/lib/systemd/                                               
                                                                                             
-2 Set permission:                                                                           
+2. Set permission:                                                                           
                                                                                             
   chmod ug+rx /usr/lib/systemd/systemd-vboxinit                                             
   chgrp vboxusers /usr/lib/systemd/systemd-vboxinit                                         
