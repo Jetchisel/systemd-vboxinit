@@ -51,15 +51,9 @@ systemd-vboxinit
 #                                                                                            #
 #  Settings --> General --> Basic --> "StartupMode --> Automatic"                            #
 #                                                                                            # 
-
 #  To enable that service at boot.                                                           #
 #                                                                                            #
 #  systemctl enable vboxvmservice.service                                                    #
-#                                                                                            #
-#  NOTE: replace "syslog" with "tty" in StandardOutput to check the script if it is          #
-#        indeed working during startup and shutdown of the host.                             #
-#                                                                                            #
-#  To check logs when "StandardOutput=syslog" is set:                                        #
 #                                                                                            #
 #  journalctl _SYSTEMD_UNIT=vboxvmservice.service                                            #
 #                                                                                            #
