@@ -1,6 +1,7 @@
 [Unit]
 Description=VBox Virtual Machine  Service
 Requires=systemd-modules-load.service  
+Before=shutdown.target reboot.target halt.target
 After=systemd-modules-load.service 
 Documentation=http://jason.ferrer.com.ph/2013/09/phpvirtualbox-on-opensuse-reloaded.html
 
@@ -8,7 +9,8 @@ Documentation=http://jason.ferrer.com.ph/2013/09/phpvirtualbox-on-opensuse-reloa
 Type=oneshot
 User=jetchisel
 Group=vboxusers
-StandardOutput=journal
+KillMode=none
+StandardOutput=syslog+console
 EnvironmentFile=/etc/default/virtualbox
 ExecStart=/usr/lib/systemd/systemd-vboxinit start
 ExecStop=/usr/lib/systemd/systemd-vboxinit stop
