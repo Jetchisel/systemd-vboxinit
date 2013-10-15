@@ -1,4 +1,4 @@
-systemd-vboxinit
+systemd-VBoxInit
 ================
 
 Autostart and auto save of your vms during start up and shutdown of your host machine
