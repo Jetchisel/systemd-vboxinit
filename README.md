@@ -48,7 +48,7 @@ systemctl enable vboxvmservice.service
                 
 check some info about the service
 
-journalctl _SYSTEMD_UNITvboxvmservice.service                                            
+journalctl _SYSTEMD_UNIT=vboxvmservice.service                                            
                                                                                             
 To check status:                                                                          
                                                                                             
