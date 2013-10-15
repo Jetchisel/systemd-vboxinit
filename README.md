@@ -31,7 +31,7 @@ The Documentation entry is optional
 Create an file called virtualbox in /etc/default (replace username)                       
 and put something like this                                                                
                                                                                             
-VBOXWEB_USERusername                                                                     
+VBOXWEB_USER=username                                                                     
                                                                                             
 
 Configure phpvirtualbox's php.ini                                                         
