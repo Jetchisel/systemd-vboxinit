@@ -54,4 +54,10 @@ and put something like this
 9. To check status:                                                                          
                                                                                             
   systemctl status vboxvmservice.service                                                   
-                                                                                        
+
+
+Note:
+
+vboxinit comes from the phpvirtualbox project which works for sysV init.         
+This is the modified/rewritten version for openSuSE using systemd.               
+Kudos to Ian Moore the autor of phpvirtualbox
