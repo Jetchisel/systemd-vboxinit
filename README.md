@@ -60,4 +60,4 @@ Note:
 
 vboxinit comes from the phpvirtualbox project which works for sysV init.         
 This is the modified/rewritten version for openSuSE using systemd.               
-Kudos to Ian Moore the autor of phpvirtualbox
+Kudos to Ian Moore the author of phpvirtualbox
